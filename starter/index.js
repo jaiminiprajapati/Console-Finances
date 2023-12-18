@@ -86,15 +86,17 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
-// Declaration
+// Variable Declaration
 var totalMonths = finances.length;
 let [total, avgChange] = [0, 0]
 let [max, min] = [0, 0];
 var maxMonth;
 var minMonth;
 
+
 // Total Months
 console.log(`Total Months: ${totalMonths}`);
+
 
 // Total
 let sum = 0;
@@ -103,6 +105,7 @@ for (var i=0; i<totalMonths; i++){
 }
 console.log(`Total: ${sum}`);
 
+
 // Average change
 for (var i=0; i<totalMonths - 1; i++){
   total += finances[i+1][1] - finances[i][1];
@@ -110,6 +113,7 @@ for (var i=0; i<totalMonths - 1; i++){
 avgChange = total/(totalMonths - 1);
 avgChange = avgChange.toFixed(2);
 console.log(`Average Change: ${avgChange}`);
+
 
 // Greatest Increase
 max = finances[1][1] - finances[0][1];
@@ -122,6 +126,7 @@ for (var i=0; i<totalMonths - 1; i++){
   }
 }
 console.log(`Greatest Increase in Profits/Losses: ${maxMonth} ($${max})`);
+
 
 // Greatest Decrease
 min = finances[1][1] - finances[0][1];
